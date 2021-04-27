@@ -24,6 +24,44 @@ They are useful for validating input and are constructed using simple concepts s
 3. Apply **|** last.
 4. Treat bracketed groups as individual characters.
 
+## How do regular expressions differ across implementations?
+
+Regex definition described at 'https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html'
+> Regex is supported in all the scripting languages (such as Perl, Python, PHP, and JavaScript), as well as general purpose programming languages such as Java and even word processors such as Word for searching texts. 
+
+Regular expressions are an important component of programming languages but they do differ across implementations.
+Programming languages have similar regular expression syntaxes, so there is a chance of them compiling after modification when re-used. 
+Developers should be careful when it comes to copying and pasting regular expressions, especially when the langauge origin is unknown as that could lead to program misbehaviour or portability problems.
+
+#### Semantic portability problems
+These problems can occur when two programming languages compile but have different match behaviour. If the regex is long, it could be hard to figure out the problem.
+
+#### Performance portability problems
+Most programming languages implement their own regex engine which they differ in the syntax and semantics they support, but they also differ in their performance, the time and/or space cost to perform a match. Performance portability problems include slow software which is frustrating for any developer.
+
+#### Syntactic portability problems
+Runtime exceptions and program crashes can be caused by regexes compiling in some languages and not others. 
+
+Information retrieved from 'https://davisjam.medium.com/why-arent-regexes-a-lingua-franca-esecfse19-a36348df3a2'
+
+## Can all formal languages be encoded as regular expressions?
+
+#### What is a formal language?
+
+As described by Wiki 'https://en.wikipedia.org/wiki/Formal_language'
+> In logic, mathematics, computer science, and linguistics, a formal language consists of words whose letters are taken from an alphabet and are well-formed according to a specific set of rules.
+
+Programming languages are an example of a formal language, which is defined by two sets of rules:
+
+**Syntax:** precise rules that tell you the symbols you are allowed to use.
+
+**Semantics:** precise rules that tell you the meanings of the symbols and legal expressions.
+
+
+
+
+
+
 
 
 
