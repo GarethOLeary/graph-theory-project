@@ -1,3 +1,10 @@
+# Reading in a file 
+userinput = input("Enter name of file:")
+myfile = open(userinput)
+info = myfile.readlines()
+print (info)
+myfile.close()
+
 
 def shunt(infix):
     """Convert infix expressions to postfix."""
