@@ -44,6 +44,19 @@ Runtime exceptions and program crashes can be caused by regexes compiling in som
 
 Information retrieved from 'https://davisjam.medium.com/why-arent-regexes-a-lingua-franca-esecfse19-a36348df3a2'
 
+## Can all formal languages be encoded as regular expressions?
+
+#### What is a formal language?
+
+As described by Wiki 'https://en.wikipedia.org/wiki/Formal_language'
+> In logic, mathematics, computer science, and linguistics, a formal language consists of words whose letters are taken from an alphabet and are well-formed according to a specific set of rules.
+
+Programming languages are an example of a formal language, which is defined by two sets of rules:
+
+**Syntax:** precise rules that tell you the symbols you are allowed to use.
+
+**Semantics:** precise rules that tell you the meanings of the symbols and legal expressions.
+
 
 
 
