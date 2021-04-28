@@ -51,6 +51,32 @@ def shunt(infix):
     # Return the postfix version of infix.
     return postfix
 
+# Thompsons Construction
+
+class state: 
+    def __init__(self, label, arrows, accept):
+        """label is the arrow labels, arrows is a list of states to
+           point to, accept is a boolean as to whether this is an accept
+           state.
+        """
+        self.label = label
+        self.arrows = arrows
+        self.accept = accept
+        
+    def followes(self):
+        """The set of states that are gotten from following this state
+           and all its e arrows."""
+        # Include this state in the returned set.
+        states = {self}
+        # If this state has e arrows, i.e. label is None.
+        if self.label is None:
+            # Loop through this state's arrows.
+            for state in self.arrows:
+                # Incorporate that state's earrow states in states.
+                states = (states | state.followes())
+        # Returns the set of states.    
+        return states
+
 
 
 
