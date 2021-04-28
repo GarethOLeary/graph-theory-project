@@ -24,6 +24,10 @@ They are useful for validating input and are constructed using simple concepts s
 3. Apply **|** last.
 4. Treat bracketed groups as individual characters.
 
+#### Examples 
+1. Check that an email address is valid.
+2. Find phone numbers in a text file.
+
 ## How do regular expressions differ across implementations?
 
 Regex definition described at 'https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html'
@@ -51,11 +55,17 @@ Information retrieved from 'https://davisjam.medium.com/why-arent-regexes-a-ling
 As described by Wiki 'https://en.wikipedia.org/wiki/Formal_language'
 > In logic, mathematics, computer science, and linguistics, a formal language consists of words whose letters are taken from an alphabet and are well-formed according to a specific set of rules.
 
+The alphabet of a formal language is made up of a  set of symbols and letters from which the strings of the language may be formed, these strings are known as words. 
+
 Programming languages are an example of a formal language, which is defined by two sets of rules:
 
 **Syntax:** precise rules that tell you the symbols you are allowed to use.
 
 **Semantics:** precise rules that tell you the meanings of the symbols and legal expressions.
+
+## Lab Work 
+
+'https://github.com/GarethOLeary/GraphTheory_WeeklyExercises'
 
 
 
