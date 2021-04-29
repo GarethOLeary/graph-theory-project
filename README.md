@@ -83,6 +83,35 @@ Each operator gets assigned its correct operator and takes into account the orde
 | + | 1 |
 | - | 1 |
 
+## Thompson's Construction
+
+Thompson's construction is an algorithm to construct a Non-determistic Finite Automation(NFA) from a regular expression. 
+
+#### Rules:
+
+1. The NFA representing the empty string.
+
+![image](https://user-images.githubusercontent.com/48318455/116588065-00556000-a913-11eb-81c7-f16efb053bbd.png)
+
+2. If the regular expression is just a character.
+
+![image](https://user-images.githubusercontent.com/48318455/116588409-7063e600-a913-11eb-9575-8f53aef9a741.png)
+
+3. The union operator is represented by a choice of transitions from a node.
+
+![image](https://user-images.githubusercontent.com/48318455/116588604-a7d29280-a913-11eb-8a5c-d4cf84452015.png)
+
+4. Concatenation simply involves connecting one NFA to the other.
+
+![image](https://user-images.githubusercontent.com/48318455/116588711-c9cc1500-a913-11eb-9c21-04f08ec10c6b.png)
+
+5. The Kleene closure must allow for taking zero or more instances of the letter from the input.
+
+![image](https://user-images.githubusercontent.com/48318455/116588226-2ed33b00-a913-11eb-9c89-ab6bda3ea8af.png)
+
+Images sourced from 'https://en.wikipedia.org/wiki/Thompson%27s_construction#Rules'
+
+
 ## Lab Work 
 
 'https://github.com/GarethOLeary/GraphTheory_WeeklyExercises'
