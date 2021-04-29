@@ -122,6 +122,8 @@ Images sourced from 'https://en.wikipedia.org/wiki/Thompson%27s_construction#Rul
 
 'https://en.wikipedia.org/wiki/Formal_language'
 
+'https://extr3metech.wordpress.com/2014/09/14/simple-text-menu-in-python/'
+
 
 
 
