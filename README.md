@@ -63,9 +63,18 @@ Programming languages are an example of a formal language, which is defined by t
 
 **Semantics:** precise rules that tell you the meanings of the symbols and legal expressions.
 
+## Shunting Yard Algorithm
+
+The shunting yard algorithm was invented by **Edsger Dijkstra** who was a famous Dutch computer scientist, with the purpose of converting an infix expression to postfix.
+
+
 ## Lab Work 
 
 'https://github.com/GarethOLeary/GraphTheory_WeeklyExercises'
+
+## Resources 
+
+
 
 
 
