@@ -66,7 +66,22 @@ Programming languages are an example of a formal language, which is defined by t
 ## Shunting Yard Algorithm
 
 The shunting yard algorithm was invented by **Edsger Dijkstra** who was a famous Dutch computer scientist, with the purpose of converting an infix expression to postfix.
+The input of this algorithm consists of two parts, the output queue and the operator stack. 
+Each operator gets assigned its correct operator and takes into account the order of precedence.
 
+#### Pseudocode of the algorithm
+
+<img width="540" alt="shunt" src="https://user-images.githubusercontent.com/48318455/116535641-e2203d80-a8db-11eb-8c17-fa88f173018e.PNG">
+
+#### Precedence Table 
+
+| Order | Order Of Precedence | 
+|---|---|
+| ^ | 3 |
+| / | 2 |
+| * | 2 |
+| + | 1 |
+| - | 1 |
 
 ## Lab Work 
 
@@ -74,7 +89,9 @@ The shunting yard algorithm was invented by **Edsger Dijkstra** who was a famous
 
 ## Resources 
 
+'https://brilliant.org/wiki/shunting-yard-algorithm/'
 
+'https://en.wikipedia.org/wiki/Formal_language'
 
 
 
