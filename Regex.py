@@ -187,13 +187,37 @@ def re_to_nfa(postfix):
     else:
         return stack[0]
 
+def Example():
+
+
+    if __name__ == "__main__":
+        tests = [  ["(a.b|b*)",   ["ab", "b", "bb", "a"]]
+                , ["a.(b.b)*.a", ["aa", "abba", "aba"]]
+                , ["a.(b.b)*.c", ["abbc", "b", "baa", "a"]]
+                ,["a.b.c*", ["aa", "abba", "aba" ,"abbc"]]
+        ]
+
+        
+
+        for test in tests:
+            infix = test[0]
+            print(f"infix:    {infix}")
+            postfix = shunt(infix)
+            print(f"postfix:  {postfix}")
+            nfa = re_to_nfa(postfix)
+            print(f"thompson: {nfa}")
+            for s in test[1]:
+                match = nfa.match(s)
+                print(f"Match '{s}': {match}")
+            print()
+
 
 
 def print_menu():       ## Your menu design here
-    
-    print ("1. Please Enter infix expression and string")
-    print ("2. Read from file ")
-    print ("3. Exit")
+    print("1. Example")
+    print ("2. Please Enter infix expression and string")
+    print ("3. Read from file ")
+    print ("4. Exit")
     
     
   
@@ -204,13 +228,16 @@ while loop:          ## While loop which will keep going until loop = False
     choice = input("Enter your choice [1-5]: ")
             
     if choice == "1":          
-        print ("Menu 1 has been selected")
+        Example()
             
     elif choice== "2":
         print ("Menu 2 has been selected")
-            
+
     elif choice== "3":
         print ("Menu 3 has been selected")
+            
+    elif choice== "4":
+        print ("bye")
                 
         loop=False # This will make the while loop to end as not value of loop is set to False
     else:
@@ -221,8 +248,3 @@ while loop:          ## While loop which will keep going until loop = False
 
 
 
-#if __name__ == "__main__":
-   # for postfix in ["abb.*.a.", "100.*.1.", 'ab|']:
-       # print(f"postfix: {postfix}")
-       # print(f"nfa:     {re_to_nfa(postfix)}")
-       # print()
