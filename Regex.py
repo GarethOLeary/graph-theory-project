@@ -211,7 +211,16 @@ def Example():
                 print(f"Match '{s}': {match}")
             print()
 
+def userInput():
+    infix = input("Enter Infix Expression:")
+    string = input("Enter String:")
 
+    postfix = shunt(infix)
+    print(f"postfix:  {postfix}")
+    nfa = re_to_nfa(postfix)
+    match = nfa.match(string)
+    print(f"Match '{string}': {match}")
+    print()
 
 def print_menu():       ## Your menu design here
     print("1. Example")
@@ -225,13 +234,13 @@ loop=True
         
 while loop:          ## While loop which will keep going until loop = False
     print_menu()    ## Displays menu
-    choice = input("Enter your choice [1-5]: ")
+    choice = input("Enter your choice [1-4]: ")
             
     if choice == "1":          
         Example()
             
     elif choice== "2":
-        print ("Menu 2 has been selected")
+        userInput()
 
     elif choice== "3":
         print ("Menu 3 has been selected")
