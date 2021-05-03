@@ -2,8 +2,20 @@
 
 ## Introduction
 
-Our third year project for Graph Theory consisted of writing a program that searches a text file using a regular expression.
+My third year project for Graph Theory consisted of writing a program that searches a text file using a regular expression.
 The program must take a regular expression and the name or path of the file as command line arguments and output the lines of the file matching the regular expression.
+
+## Instructions 
+
+1. git clone https://github.com/GarethOLeary/graph-theory-project.git
+
+2. cd graph-theory-project
+
+3. Python Regex.py
+
+## Explanation of algorithm 
+
+The implementation of my project was from the lab work I did throughout the semester. The backbone of this project is based on the Shunting yard algorithm and Thompsons construction. The Shunting yard was the first part of the project which involved converting infix expressions to postfix by order of precedence. Thompsons Construction was a important part of the structure in this project as it converts a regular expression into an Non-determistic Finite Automation(NFA).The NFA is then matched against the string. A menu with four options is shown to the user. The first option gives you an example of all the matches. The second option lets you enter infix and string expressions with the postfix and result printed out. The third option lets you enter a file path or name, where the expressions are read from a file and matched. 
 
 ## What is a regular expression?
 
@@ -31,7 +43,7 @@ They are useful for validating input and are constructed using simple concepts s
 ## How do regular expressions differ across implementations?
 
 Regex definition described at 'https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html'
-> Regex is supported in all the scripting languages (such as Perl, Python, PHP, and JavaScript), as well as general purpose programming languages such as Java and even word processors such as Word for searching texts. 
+> Regex is supported in all the scripting languages (such as Perl, Python, PHP, and JavaScript), as well as general purpose programming languages such as Java and even word processors such as Word for searching texts.
 
 Regular expressions are an important component of programming languages but they do differ across implementations.
 Programming languages have similar regular expression syntaxes, so there is a chance of them compiling after modification when re-used. 
@@ -55,13 +67,17 @@ Information retrieved from 'https://davisjam.medium.com/why-arent-regexes-a-ling
 As described by Wiki 'https://en.wikipedia.org/wiki/Formal_language'
 > In logic, mathematics, computer science, and linguistics, a formal language consists of words whose letters are taken from an alphabet and are well-formed according to a specific set of rules.
 
-The alphabet of a formal language is made up of a  set of symbols and letters from which the strings of the language may be formed, these strings are known as words. 
+The alphabet of a formal language is made up of a set of symbols and letters from which the strings of the language may be formed, these strings are known as words. 
 
 Programming languages are an example of a formal language, which is defined by two sets of rules:
 
 **Syntax:** precise rules that tell you the symbols you are allowed to use.
 
 **Semantics:** precise rules that tell you the meanings of the symbols and legal expressions.
+
+#### Conclusion
+
+Yes, a formal language is a set of strings all over the same alphabet and a regular expression is a string of symbols that specifies a formal language.
 
 ## Shunting Yard Algorithm
 
@@ -123,6 +139,8 @@ Images sourced from 'https://en.wikipedia.org/wiki/Thompson%27s_construction#Rul
 'https://en.wikipedia.org/wiki/Formal_language'
 
 'https://extr3metech.wordpress.com/2014/09/14/simple-text-menu-in-python/'
+
+'https://stackoverflow.com/questions/22741088/how-does-strip-method-works-with-append-method'
 
 
 
