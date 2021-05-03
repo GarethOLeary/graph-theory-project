@@ -1,10 +1,3 @@
-# Reading in a file 
-#userinput = input("Enter name of file:")
-#myfile = open(userinput)
-#info = myfile.readlines()
-#print (info)
-#myfile.close()
-
 
 def shunt(infix):
     """Convert infix expressions to postfix."""
@@ -212,9 +205,10 @@ def Example():
             print()
 
 def userInput():
+    # Enter infix and String 
     infix = input("Enter Infix Expression:")
     string = input("Enter String:")
-
+     # Postfix and match result printed
     postfix = shunt(infix)
     print(f"postfix:  {postfix}")
     nfa = re_to_nfa(postfix)
@@ -222,36 +216,65 @@ def userInput():
     print(f"Match '{string}': {match}")
     print()
 
-def print_menu():       ## Your menu design here
+#Menu with options
+def print_menu():       
     print("1. Example")
     print ("2. Please Enter infix expression and string")
     print ("3. Read from file ")
     print ("4. Exit")
     
+
+def fileInput():
+    # file path or name for infix and string 
+    infixPath = input("Enter infix file name or path: ")
+    stringPath = input(" Enter String file name or path:")
+
+    infixFile = []
+    stringFile = []
+    # open file and read
+    f = open(infixPath).readlines()
+    #Strips words
+    for x in f:
+        infixFile.append(x.strip())
+   # open file and read 
+    f = open(stringPath).readlines()
+    for x in f:
+        stringFile.append(x.strip())
     
+    # prints out matches from files
+    for i in infixFile:
+        infix = i
+        print(f"infix:    {infix}")
+        postfix = shunt(infix)
+        print(f"postfix:  {postfix}")
+        nfa = re_to_nfa(postfix)
+       # print(f"thompson: {nfa}")
+        for s in stringFile:
+            match = nfa.match(s)
+            print(f"Match '{s}': {match}")
+        print()
   
 loop=True      
         
 while loop:          ## While loop which will keep going until loop = False
     print_menu()    ## Displays menu
     choice = input("Enter your choice [1-4]: ")
-            
+    # Calls example function
     if choice == "1":          
         Example()
-            
+    # calls user input function   
     elif choice== "2":
         userInput()
-
+    # Calls file entry function
     elif choice== "3":
-        print ("Menu 3 has been selected")
-            
+       fileInput()            
     elif choice== "4":
         print ("bye")
                 
         loop=False # This will make the while loop to end as not value of loop is set to False
     else:
                 
-        input("Wrong option selection. Enter any key to try again..")
+        input("Please enter a valid option")
 
         
 
